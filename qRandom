@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h>
+#include <time.h>
+
+int main() {
+  int i, n, pos,v[10];  
+  
+  setlocale(LC_ALL,"Portuguese_Brazil");
+  
+  srand(time(NULL));
+  
+  for (i=0; i<10; i++) {
+    v[i] = rand() % 100;
+  }
+  
+  printf("Digite um número: ");
+  scanf("%d", &n);
+  
+  pos = -1;
+  
+  for (i=0; i<10; i++) {
+    if (v[i] == n) {
+      pos = i;
+      break;
+    }
+  }
+  
+  if (pos == -1) {
+    printf("\nO número não está no vetor.\n");
+  } else {
+    printf("\nO número está na posição %d do vetor.\n", pos);
+  }
+  
+  return 0;
+}
+
