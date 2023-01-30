@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<locale.h>
+
+int main() {
+	
+  int i, n,r,t[10];
+
+	setlocale(LC_ALL,"Portuguese_Brazil");
+
+  printf("Digite o número inicial da PG: ");
+  scanf("%d", &n);
+  
+  printf("Digite a razão da PG: ");
+  scanf("%d", &r);
+  
+  t
+  [0] = n;
+  for (i = 1; i < 10; i++) {
+    t[i] = t[i-1] * r;
+  }
+  
+  printf("\nA PG então é: \n");
+  for (i = 0; i < 10; i++) {
+    printf("\n %d", t[i]);
+  }
+  
+  return 0;
+}
